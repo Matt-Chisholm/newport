@@ -1,5 +1,6 @@
 import * as React from "react";
 import Navbar from "./components/NavBar";
+import HomePage from "./components/Home";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
@@ -7,7 +8,7 @@ import "./App.css";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#020024",
+      main: "rgb(8, 28, 44)",
     },
     secondary: {
       main: "#090979",
@@ -22,6 +23,7 @@ export default function App() {
       <CssBaseline />
       <div className='main-container'>
         <Navbar />
+        <HomePage />
       </div>
     </ThemeProvider>
   );

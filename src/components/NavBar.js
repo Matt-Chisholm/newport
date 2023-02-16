@@ -10,12 +10,15 @@ function Navbar() {
           display: "flex",
           justifyContent: "flex-end",
           alignItems: "flex-end",
+          boxShadow: "none",
+          marginTop: "1rem",
         }}>
         <Toolbar
           sx={{
             display: "flex",
             justifyContent: "space-around",
             alignItems: "center",
+            boxShadow: "none",
             width: "60%",
           }}>
           <Button color='inherit'>Projects</Button>
