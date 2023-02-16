@@ -1,10 +1,28 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
+import Navbar from "./components/NavBar";
+import { CssBaseline } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import "./App.css";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#020024",
+    },
+    secondary: {
+      main: "#090979",
+    },
+  },
+  mode: "dark",
+});
 
 export default function App() {
   return (
-    <div>
-      <Button variant='contained'>Hello World</Button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className='main-container'>
+        <Navbar />
+      </div>
+    </ThemeProvider>
   );
 }
