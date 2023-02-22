@@ -2,10 +2,6 @@ import * as React from "react";
 import { Container, Typography } from "@mui/material";
 
 export default function HomePage() {
-
-  console.log('hello');
-
-  const a = 'x';
   return (
     <Container maxWidth='md'>
       <Typography variant='h4' gutterBottom>
