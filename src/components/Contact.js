@@ -1,10 +1,5 @@
-import { View, Text } from "react-native";
 import React from "react";
 
 export default function Contact() {
-  return (
-    <View>
-      <Text>Contact</Text>
-    </View>
-  );
+  return <div>Contact</div>;
 }
