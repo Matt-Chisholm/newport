@@ -35,7 +35,7 @@ export default function HomePage() {
         sx={{
           p: 2,
           m: 2,
-          color: "#689da7",
+          color: "#4b6d74",
           borderRadius: "3em",
           backgroundColor: "rgb(18, 17, 17)",
           width: "80%",
