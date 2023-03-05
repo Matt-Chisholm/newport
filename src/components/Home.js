@@ -18,7 +18,7 @@ export default function HomePage() {
   const card = (
     <React.Fragment>
       <CardContent>
-        <Typography variant='h4' gutterBottom sx={{ fontFamily: "Dosis" }}>
+        <Typography variant='h4' gutterBottom sx={{ fontFamily: "DosisBold" }}>
           Matt Chisholm {bull} Web and Mobile Developer
         </Typography>
         <Avatar

@@ -4,13 +4,18 @@
 }
 
 @font-face {
-  font-family: '80s';
+  font-family: 'Rubik';
   src: url("./fonts/Rubik80sFade-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Dosis';
   src: url("./fonts/Dosis-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'DosisBold';
+  src: url("./fonts/Dosis-Bold.ttf") format("truetype");
 }
 
 .App-logo {
