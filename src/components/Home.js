@@ -1,5 +1,12 @@
 import * as React from "react";
-import { Container, Typography, Card, Box, CardContent } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Card,
+  Box,
+  CardContent,
+  Avatar,
+} from "@mui/material";
 
 export default function HomePage() {
   const bull = (
@@ -11,22 +18,31 @@ export default function HomePage() {
   const card = (
     <React.Fragment>
       <CardContent>
-        <Typography variant='h4' gutterBottom>
+        <Typography variant='h4' gutterBottom sx={{ fontFamily: "Dosis" }}>
           Matt Chisholm {bull} Web and Mobile Developer
         </Typography>
-        <Typography variant='body1' gutterBottom>
-          Hi, I'm Matt! I'm a developer based in Victoria, BC, and I work with
-          React, React Native, JavaScript, and TypeScript to build web and
-          mobile apps.
-        </Typography>
+        <Avatar
+          alt='Matt Chisholm'
+          src={"https://avatars.githubusercontent.com/u/88512443?v=4"}
+          sx={{ width: 150, height: 150 }}
+        />
       </CardContent>
     </React.Fragment>
   );
   return (
-    <Container maxWidth='md'>
+    <Container maxWidth='md' sx={{ backgroundColor: "rgb(18, 17, 17)" }}>
       <Card
-        sx={{ p: 2, m: 2, backgroundColor: "black", color: "whitesmoke" }}
-        elevation={3}>
+        sx={{
+          p: 2,
+          m: 2,
+          color: "#689da7",
+          borderRadius: "3em",
+          backgroundColor: "rgb(18, 17, 17)",
+          width: "80%",
+          height: "80%",
+        }}
+        elevation={3}
+        className='top-card'>
         {card}
       </Card>
     </Container>

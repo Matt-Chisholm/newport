@@ -12,6 +12,8 @@ function Navbar() {
           alignItems: "flex-end",
           boxShadow: "none",
           marginTop: "1rem",
+          backgroundColor: "transparent",
+          color: "#689da7",
         }}>
         <Toolbar
           sx={{

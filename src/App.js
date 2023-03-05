@@ -4,6 +4,8 @@ import HomePage from "./components/Home";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
+import "./fonts/Dosis-Regular.ttf";
+import "./fonts/Rubik80sFade-Regular.ttf";
 
 const theme = createTheme({
   palette: {
