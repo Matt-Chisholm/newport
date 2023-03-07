@@ -18,14 +18,28 @@ export default function HomePage() {
   const card = (
     <React.Fragment>
       <CardContent>
-        <Typography variant='h4' gutterBottom sx={{ fontFamily: "DosisBold" }}>
-          Matt Chisholm {bull} Web and Mobile Developer
+        <Typography
+          variant='h1'
+          gutterBottom
+          sx={{ fontFamily: "Rubik", color: "whitesmoke", opacity: "60%" }}>
+          Matt Chisholm
         </Typography>
         <Avatar
           alt='Matt Chisholm'
           src={"https://avatars.githubusercontent.com/u/88512443?v=4"}
           sx={{ width: 150, height: 150 }}
         />
+        <Typography
+          variant='h4'
+          gutterBottom
+          sx={{
+            fontFamily: "Dosis",
+            color: "whitesmoke",
+            opacity: "60%",
+            marginLeft: "50%",
+          }}>
+          Web Developer {bull} Software Engineer
+        </Typography>
       </CardContent>
     </React.Fragment>
   );
@@ -40,6 +54,7 @@ export default function HomePage() {
           backgroundColor: "rgb(18, 17, 17)",
           width: "80%",
           height: "80%",
+          marginRight: "30%",
         }}
         elevation={3}
         className='top-card'>
