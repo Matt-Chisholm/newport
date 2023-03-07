@@ -13,79 +13,81 @@ export default function About() {
         flexDirection: "row",
         backgroundColor: "#232424",
       }}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#232424",
-          height: "40",
-          width: "20vw",
-          marginRight: "10rem",
-        }}>
-        <Typography
-          variant='h7'
-          sx={{
-            fontFamily: "Dosis",
-            color: "grey",
-            opacity: "90%",
-            marginBottom: "2rem",
-            marginRight: "20rem",
-          }}>
-          Skills
-        </Typography>
+      <Grow in={true} timeout={1200}>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            border: "0.5px solid black",
-            padding: "1rem",
-            borderRadius: "10px",
-            boxShadow: "0 0 6px 0 rgba(0, 0, 0, 0.5)",
+            backgroundColor: "#232424",
+            height: "40",
+            width: "20vw",
+            marginRight: "10rem",
           }}>
           <Typography
-            variant='h4'
+            variant='h7'
             sx={{
               fontFamily: "Dosis",
-              color: "white",
+              color: "grey",
               opacity: "90%",
               marginBottom: "2rem",
+              marginRight: "20rem",
             }}>
-            Tech Stack
+            Skills
           </Typography>
-          <Typography
-            variant='h6'
+          <Box
             sx={{
-              fontFamily: "TiltWarp",
-              color: "white",
-              opacity: "70%",
-              fontStyle: "italic",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "0.5px solid black",
+              padding: "1rem",
+              borderRadius: "10px",
+              boxShadow: "0 0 6px 0 rgba(0, 0, 0, 0.5)",
             }}>
-            {bull} JavaScript
-            {bull} React
-            {bull} React Native
-            {bull} Redux
-            {bull} Node.js
-            {bull} Express
-            {bull} PostgreSQL
-            {bull} HTML
-            {bull} CSS
-            {bull} Git
-            {bull} Linux
-          </Typography>
-          <Avatar
-            alt='JS'
-            src={screen}
-            sx={{
-              width: 150,
-              height: 150,
-            }}
-          />
+            <Typography
+              variant='h4'
+              sx={{
+                fontFamily: "Dosis",
+                color: "white",
+                opacity: "90%",
+                marginBottom: "2rem",
+              }}>
+              Tech Stack
+            </Typography>
+            <Typography
+              variant='h6'
+              sx={{
+                fontFamily: "TiltWarp",
+                color: "white",
+                opacity: "70%",
+                fontStyle: "italic",
+              }}>
+              {bull} JavaScript
+              {bull} React
+              {bull} React Native
+              {bull} Redux
+              {bull} Node.js
+              {bull} Express
+              {bull} PostgreSQL
+              {bull} HTML
+              {bull} CSS
+              {bull} Git
+              {bull} Linux
+            </Typography>
+            <Avatar
+              alt='JS'
+              src={screen}
+              sx={{
+                width: 150,
+                height: 150,
+              }}
+            />
+          </Box>
         </Box>
-      </Box>
+      </Grow>
       <Grow in={true} timeout={1000}>
         <Box
           sx={{
