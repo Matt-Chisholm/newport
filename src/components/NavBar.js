@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function NavBar() {
+export default function NavBar({ selectedScreen, setSelectedScreen }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -24,21 +24,29 @@ export default function NavBar() {
           <Typography
             variant='h4'
             component='div'
-            sx={{ flexGrow: 1, fontFamily: "Dosis", marginLeft: "8rem" }}>
+            sx={{
+              flexGrow: 1,
+              fontFamily: "Dosis",
+              marginLeft: "10rem",
+              marginRight: "12rem",
+            }}>
             Matt Chisholm
           </Typography>
           <Button
             color='inherit'
-            sx={{ marginRight: "8rem", fontFamily: "Dosis" }}>
+            sx={{ marginRight: "8rem", fontFamily: "Dosis" }}
+            onClick={() => setSelectedScreen("home")}>
             Home
           </Button>
           <Button
             color='inherit'
+            onClick={() => setSelectedScreen("projects")}
             sx={{ marginRight: "8rem", fontFamily: "Dosis" }}>
             Projects
           </Button>
           <Button
             color='inherit'
+            onClick={() => setSelectedScreen("contact")}
             sx={{ marginRight: "50vw", fontFamily: "Dosis" }}>
             Contact
           </Button>
