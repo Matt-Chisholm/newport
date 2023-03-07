@@ -9,12 +9,6 @@ import {
 } from "@mui/material";
 
 export default function HomePage() {
-  const bull = (
-    <Box component='span' sx={{ display: "inline-block", mx: "2px" }}>
-      &bull;
-    </Box>
-  );
-
   const card = (
     <React.Fragment>
       <CardContent>
@@ -93,7 +87,7 @@ export default function HomePage() {
     </React.Fragment>
   );
   return (
-    <Container maxWidth='60%' sx={{ backgroundColor: "rgb(18, 17, 17)" }}>
+    <Container maxWidth='60%' sx={{ backgroundColor: "#232424" }}>
       <Card
         sx={{
           p: 2,

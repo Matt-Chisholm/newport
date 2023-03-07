@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Container, Avatar } from "@mui/material";
 
 export default function About() {
   return (
@@ -9,20 +9,21 @@ export default function About() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "rgb(8, 28, 44)",
+        backgroundColor: "#232424",
         height: "40",
         width: "40vw",
         marginLeft: "30vw",
       }}>
       <Typography
-        variant='h3'
+        variant='h7'
         sx={{
           fontFamily: "Dosis",
-          color: "white",
+          color: "grey",
           opacity: "90%",
           marginBottom: "2rem",
+          marginRight: "20rem",
         }}>
-        Hello! I'm Matt Chisholm.
+        About Me
       </Typography>
       <Typography
         variant='h4'
@@ -32,10 +33,20 @@ export default function About() {
           opacity: "90%",
           marginBottom: "2rem",
         }}>
-        Avid learner, problem solver, and full stack developer.
+        Hello! I'm Matt Chisholm.
       </Typography>
       <Typography
         variant='h5'
+        sx={{
+          fontFamily: "TiltWarp",
+          color: "white",
+          opacity: "70%",
+          marginBottom: "2rem",
+        }}>
+        Avid learner, problem solver, and full stack developer.
+      </Typography>
+      <Typography
+        variant='h6'
         sx={{
           fontFamily: "Dosis",
           color: "white",

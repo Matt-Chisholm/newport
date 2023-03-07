@@ -2,6 +2,8 @@ import * as React from "react";
 import HomePage from "./components/Home";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
@@ -34,6 +36,8 @@ export default function App() {
         />
         <HomePage />
         {selectedScreen === "home" ? <About /> : null}
+        {selectedScreen === "projects" ? <Projects /> : null}
+        {selectedScreen === "contact" ? <Contact /> : null}
       </div>
     </ThemeProvider>
   );
