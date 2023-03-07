@@ -1,44 +1,49 @@
-import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  MenuIcon,
-  Box,
-} from "@mui/material";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 
-function Navbar() {
+export default function NavBar() {
   return (
-    <div>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position='static'
         sx={{
-          display: "flex",
-          justifyContent: "flex-end",
-          alignItems: "flex-end",
-          boxShadow: "none",
-          marginTop: "1rem",
           backgroundColor: "transparent",
-          color: "#689da7",
+          color: "#0acfcf",
         }}>
         <Toolbar
           sx={{
             display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            boxShadow: "none",
-            width: "60%",
-            fontFamily: "DosisBold",
+            alignContent: "space-around",
           }}>
-          <Button color='inherit'>Home</Button>
-          <Button color='inherit'>Projects</Button>
-          <Button color='inherit'>About</Button>
-          <Button color='inherit'>Contact</Button>
+          <Typography
+            variant='h4'
+            component='div'
+            sx={{ flexGrow: 1, fontFamily: "Dosis", marginLeft: "8rem" }}>
+            Matt Chisholm
+          </Typography>
+          <Button
+            color='inherit'
+            sx={{ marginRight: "8rem", fontFamily: "Dosis" }}>
+            Home
+          </Button>
+          <Button
+            color='inherit'
+            sx={{ marginRight: "8rem", fontFamily: "Dosis" }}>
+            Projects
+          </Button>
+          <Button
+            color='inherit'
+            sx={{ marginRight: "50vw", fontFamily: "Dosis" }}>
+            Contact
+          </Button>
         </Toolbar>
       </AppBar>
-    </div>
+    </Box>
   );
 }
-
-export default Navbar;

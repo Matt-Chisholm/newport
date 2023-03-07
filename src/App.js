@@ -1,11 +1,12 @@
 import * as React from "react";
-import Navbar from "./components/NavBar";
 import HomePage from "./components/Home";
+import NavBar from "./components/NavBar";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
 import "./fonts/Dosis-Regular.ttf";
 import "./fonts/Rubik80sFade-Regular.ttf";
+import "./fonts/TiltWarp-Regular.ttf";
 
 const theme = createTheme({
   palette: {
@@ -24,7 +25,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className='main-container'>
-        <Navbar />
+        <NavBar />
         <HomePage />
       </div>
     </ThemeProvider>
