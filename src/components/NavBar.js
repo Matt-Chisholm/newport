@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import screen from "../images/screen.png";
 
 export default function NavBar({ selectedScreen, setSelectedScreen }) {
   return (
@@ -50,11 +49,6 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
             sx={{ marginRight: "50vw", fontFamily: "Dosis" }}>
             Contact
           </Button>
-          <Avatar
-            alt='Matt Chisholm'
-            src={screen}
-            sx={{ width: 150, height: 150, marginRight: "6rem" }}
-          />
         </Toolbar>
       </AppBar>
     </Box>
