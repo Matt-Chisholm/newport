@@ -4,35 +4,37 @@ import { TextField, Button, Container } from "@mui/material";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState({});
-
-  const form = useRef();
-
-  const handleFormSubmit = (e) => {
+  const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const public_key = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+  const [formStatus, setFormStatus] = React.useState("Send");
+  const [error, setError] = React.useState(null);
+  const onSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
+    setFormStatus("Sending...");
+    const from_name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+    const templateParams = {
+      from_name,
+      email,
+      message,
+    };
     emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
+      .send(service_id, template_id, templateParams, public_key)
+      .then((result) => {
+        if (result.status === 200) {
+          setFormStatus("Sent!");
+          e.target.reset();
+        } else {
+          setError("Something went wrong. Please try again later.");
+          setFormStatus("Send");
         }
-      );
+      });
   };
 
   return (
-    <form ref={form} onSubmit={handleFormSubmit}>
+    <form onSubmit={onSubmit}>
       <Container
         sx={{
           backgroundColor: "transparent",
@@ -71,7 +73,7 @@ export default function Contact() {
             backgroundColor: "#0acfcf",
             color: "black",
           }}>
-          Submit
+          {formStatus}
         </Button>
       </Container>
     </form>
