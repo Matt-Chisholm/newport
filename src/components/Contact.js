@@ -1,6 +1,7 @@
 import React from "react";
 import { TextField, Button, Typography, Container } from "@mui/material";
 import emailjs from "@emailjs/browser";
+import Grow from "@mui/material/Grow";
 
 export default function Contact() {
   const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -33,51 +34,53 @@ export default function Contact() {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <Container
-        sx={{
-          backgroundColor: "transparent",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          color: "#4b6d74",
-        }}>
-        <Typography variant='h4' sx={{ marginBottom: "1rem", color: "red" }}>
-          {error ? error : ""}
-        </Typography>
-        <TextField
-          id='name'
-          label='Name'
-          variant='outlined'
-          sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
-        />
-        <TextField
-          id='email'
-          label='Email'
-          variant='outlined'
-          sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
-        />
-        <TextField
-          id='message'
-          label='Message'
-          variant='outlined'
-          multiline
-          rows={4}
-          sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
-        />
-        <Button
-          variant='contained'
-          type='submit'
+    <Grow in={true} timeout={1300}>
+      <form onSubmit={onSubmit}>
+        <Container
           sx={{
-            width: "2a0%",
-            marginBottom: "1rem",
-            backgroundColor: "#0acfcf",
-            color: "black",
+            backgroundColor: "transparent",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            color: "#4b6d74",
           }}>
-          {formStatus}
-        </Button>
-      </Container>
-    </form>
+          <Typography variant='h4' sx={{ marginBottom: "1rem", color: "red" }}>
+            {error ? error : ""}
+          </Typography>
+          <TextField
+            id='name'
+            label='Name'
+            variant='outlined'
+            sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
+          />
+          <TextField
+            id='email'
+            label='Email'
+            variant='outlined'
+            sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
+          />
+          <TextField
+            id='message'
+            label='Message'
+            variant='outlined'
+            multiline
+            rows={4}
+            sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
+          />
+          <Button
+            variant='contained'
+            type='submit'
+            sx={{
+              width: "2a0%",
+              marginBottom: "1rem",
+              backgroundColor: "#0acfcf",
+              color: "black",
+            }}>
+            {formStatus}
+          </Button>
+        </Container>
+      </form>
+    </Grow>
   );
 }

@@ -10,80 +10,9 @@ export default function About() {
       sx={{
         display: "flex",
         flexDirection: "row",
+        justifyContent: "center",
         backgroundColor: "#232424",
       }}>
-      <Grow in={true} timeout={1200}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "#232424",
-            height: "40",
-            width: "20vw",
-            marginRight: "10rem",
-          }}>
-          <Typography
-            variant='h7'
-            sx={{
-              fontFamily: "Dosis",
-              color: "grey",
-              opacity: "90%",
-              marginBottom: "2rem",
-              marginRight: "20rem",
-            }}>
-            Skills
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "0.5px solid black",
-              padding: "1rem",
-              borderRadius: "10px",
-              boxShadow: "0 0 6px 0 rgba(0, 0, 0, 0.5)",
-            }}>
-            <Typography
-              variant='h4'
-              sx={{
-                fontFamily: "Dosis",
-                color: "#4b6d74",
-                opacity: "100%",
-                marginBottom: "2rem",
-              }}>
-              Tech Stack
-            </Typography>
-            <Container
-              maxWidth='xl'
-              sx={{ display: "flex", flexDirection: "row" }}>
-              <Typography
-                variant='h6'
-                sx={{
-                  fontFamily: "TiltWarp",
-                  color: "white",
-                  opacity: "70%",
-                  textAlign: "center",
-                  marginBottom: "2rem",
-                }}>
-                {bull} JavaScript
-                {bull} React
-                {bull} React Native
-                {bull} Redux
-                {bull} Node.js
-                {bull} Express
-                {bull} PostgreSQL
-                {bull} HTML
-                {bull} CSS
-                {bull} Git
-                {bull} Linux
-              </Typography>
-            </Container>
-          </Box>
-        </Box>
-      </Grow>
       <Grow in={true} timeout={1000}>
         <Box
           sx={{
