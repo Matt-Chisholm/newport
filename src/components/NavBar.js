@@ -7,6 +7,12 @@ import Button from "@mui/material/Button";
 import "../css/NavBar.css";
 
 export default function NavBar({ selectedScreen, setSelectedScreen }) {
+  const selectedStyle = {
+    color: "#0acfcf",
+    borderBottom: "2px solid #0acfcf",
+    borderTop: "2px solid #0acfcf",
+    borderRadius: "0px",
+  };
   return (
     <Box sx={{ flexGrow: 2 }}>
       <AppBar
@@ -34,7 +40,11 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
           <Button
             color='inherit'
             className='nav-button'
-            sx={{ marginRight: "8rem", fontFamily: "Dosis" }}
+            sx={{
+              marginRight: "8rem",
+              fontFamily: "Dosis",
+              ...(selectedScreen === "home" && selectedStyle),
+            }}
             onClick={() => setSelectedScreen("home")}>
             Home
           </Button>
@@ -42,14 +52,22 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
             color='inherit'
             className='nav-button'
             onClick={() => setSelectedScreen("projects")}
-            sx={{ marginRight: "8rem", fontFamily: "Dosis" }}>
+            sx={{
+              marginRight: "8rem",
+              fontFamily: "Dosis",
+              ...(selectedScreen === "projects" && selectedStyle),
+            }}>
             Projects
           </Button>
           <Button
             color='inherit'
             className='nav-button'
             onClick={() => setSelectedScreen("contact")}
-            sx={{ marginRight: "50vw", fontFamily: "Dosis" }}>
+            sx={{
+              marginRight: "50vw",
+              fontFamily: "Dosis",
+              ...(selectedScreen === "contact" && selectedStyle),
+            }}>
             Contact
           </Button>
         </Toolbar>
