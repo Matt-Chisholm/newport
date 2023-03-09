@@ -1,31 +1,38 @@
 import React from "react";
+import { useState, useRef } from "react";
 import { TextField, Button, Container } from "@mui/material";
-import { useFormControls } from "../helpers/formValidation";
-const inputFieldValues = [
-  {
-    name: "fullName",
-    label: "Full Name",
-    id: "my-name",
-  },
-  {
-    name: "email",
-    label: "Email",
-    id: "my-email",
-  },
-  {
-    name: "message",
-    label: "Message",
-    id: "my-message",
-    multiline: true,
-    rows: 10,
-  },
-];
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const { handleInputValue, handleFormSubmit, formIsValid, errors } =
-    useFormControls();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const form = useRef();
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log(name, email, message);
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form ref={form} onSubmit={handleFormSubmit}>
       <Container
         sx={{
           backgroundColor: "transparent",
@@ -35,32 +42,29 @@ export default function Contact() {
           flexDirection: "column",
           color: "#4b6d74",
         }}>
-        {inputFieldValues.map((inputField, index) => (
-          <TextField
-            key={index}
-            name={inputField.name}
-            label={inputField.label}
-            id={inputField.id}
-            multiline={inputField.multiline}
-            rows={inputField.rows}
-            autoComplete='none'
-            onChange={handleInputValue}
-            {...(errors[inputField.name] && {
-              error: true,
-              helperText: errors[inputField.name],
-            })}
-            sx={{
-              width: "50%",
-              marginBottom: "1rem",
-              backgroundColor: "grey",
-              color: "black",
-            }}
-          />
-        ))}
+        <TextField
+          id='name'
+          label='Name'
+          variant='outlined'
+          sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
+        />
+        <TextField
+          id='email'
+          label='Email'
+          variant='outlined'
+          sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
+        />
+        <TextField
+          id='message'
+          label='Message'
+          variant='outlined'
+          multiline
+          rows={4}
+          sx={{ width: "40%", marginBottom: "1rem", backgroundColor: "grey" }}
+        />
         <Button
           variant='contained'
           type='submit'
-          disabled={!formIsValid}
           sx={{
             width: "2a0%",
             marginBottom: "1rem",
