@@ -1,25 +1,30 @@
-import React from "react";
-import { TextField, Button, Typography, Container } from "@mui/material";
+import { useState } from "react";
+import {
+  Container,
+  Typography,
+  TextField,
+  Button,
+  Grow,
+  Box,
+} from "@mui/material";
 import emailjs from "@emailjs/browser";
-import Grow from "@mui/material/Grow";
+import "../css/NavBar.css";
 
 export default function Contact() {
   const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const public_key = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-  const [formStatus, setFormStatus] = React.useState("Send");
-  const [error, setError] = React.useState(null);
-  const onSubmit = (e) => {
+
+  const [formStatus, setFormStatus] = useState("Send");
+  const [error, setError] = useState(null);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setFormStatus("Sending...");
     const from_name = e.target.name.value;
     const email = e.target.email.value;
     const message = e.target.message.value;
-    const templateParams = {
-      from_name,
-      email,
-      message,
-    };
+    const templateParams = { from_name, email, message };
     emailjs
       .send(service_id, template_id, templateParams, public_key)
       .then((result) => {
@@ -35,82 +40,67 @@ export default function Contact() {
 
   return (
     <Grow in={true} timeout={1300}>
-      <Container
-        sx={{
-          alignItems: "center",
-          justifyContent: "center",
-        }}>
+      <Container sx={{ maxWidth: "md", py: 8 }}>
         <Typography
-          variant='h7'
+          variant='h6'
           sx={{
+            fontWeight: "bold",
+            textAlign: "center",
             fontFamily: "Dosis",
             color: "grey",
-            opacity: "90%",
-            marginBottom: "2rem",
-            marginLeft: "20rem",
           }}>
           Send me an email
         </Typography>
-        <form onSubmit={onSubmit}>
-          <Container
+        <Box
+          component='form'
+          onSubmit={handleSubmit}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            mt: 4,
+          }}>
+          <Typography variant='subtitle1' sx={{ mb: 2, color: "error.main" }}>
+            {error ? error : ""}
+          </Typography>
+          <TextField
+            id='name'
+            className='input'
+            label='Name'
+            variant='outlined'
+            sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
+            fullWidth
+          />
+          <TextField
+            id='email'
+            label='Email'
+            className='input'
+            variant='outlined'
+            sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
+            fullWidth
+          />
+          <TextField
+            id='message'
+            label='Message'
+            className='input'
+            variant='outlined'
+            multiline
+            rows={4}
+            sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
+            fullWidth
+          />
+          <Button
+            variant='contained'
+            type='submit'
             sx={{
-              backgroundColor: "transparent",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-              color: "#4b6d74",
+              alignSelf: "center",
+              backgroundColor: "#0ddada",
+              color: "black",
             }}>
-            <Typography
-              variant='h4'
-              sx={{ marginBottom: "1rem", color: "red" }}>
-              {error ? error : ""}
-            </Typography>
-            <TextField
-              id='name'
-              label='Name'
-              variant='outlined'
-              sx={{
-                width: "40%",
-                marginBottom: "1rem",
-                backgroundColor: "grey",
-              }}
-            />
-            <TextField
-              id='email'
-              label='Email'
-              variant='outlined'
-              sx={{
-                width: "40%",
-                marginBottom: "1rem",
-                backgroundColor: "grey",
-              }}
-            />
-            <TextField
-              id='message'
-              label='Message'
-              variant='outlined'
-              multiline
-              rows={4}
-              sx={{
-                width: "40%",
-                marginBottom: "1rem",
-                backgroundColor: "grey",
-              }}
-            />
-            <Button
-              variant='contained'
-              type='submit'
-              sx={{
-                width: "2a0%",
-                marginBottom: "1rem",
-                backgroundColor: "#0acfcf",
-                color: "black",
-              }}>
-              {formStatus}
-            </Button>
-          </Container>
-        </form>
+            {formStatus}
+          </Button>
+        </Box>
       </Container>
     </Grow>
   );

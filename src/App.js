@@ -25,7 +25,6 @@ const theme = createTheme({
 
 export default function App() {
   const [selectedScreen, setSelectedScreen] = React.useState("home");
-  console.log(selectedScreen);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box, Container, Avatar } from "@mui/material";
+import { Typography, Box, Container, Avatar, Grid } from "@mui/material";
 import Grow from "@mui/material/Grow";
 
 export default function About() {
@@ -9,34 +9,26 @@ export default function About() {
       maxWidth='xl'
       sx={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         justifyContent: "center",
+        alignItems: "center",
         backgroundColor: "#232424",
+        padding: "3rem",
       }}>
-      <Grow in={true} timeout={1000}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "#232424",
-            height: "40",
-            width: "40vw",
-          }}>
+      <Typography
+        variant='h4'
+        sx={{
+          fontFamily: "Dosis",
+          color: "grey",
+          opacity: "90%",
+          marginBottom: "2rem",
+        }}>
+        About Me
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item md={8} xs={12}>
           <Typography
-            variant='h7'
-            sx={{
-              fontFamily: "Dosis",
-              color: "grey",
-              opacity: "90%",
-              marginBottom: "2rem",
-              marginRight: "20rem",
-            }}>
-            About Me
-          </Typography>
-          <Typography
-            variant='h4'
+            variant='h5'
             sx={{
               fontFamily: "Dosis",
               color: "white",
@@ -46,7 +38,7 @@ export default function About() {
             Hello! I'm Matt Chisholm.
           </Typography>
           <Typography
-            variant='h5'
+            variant='h6'
             sx={{
               fontFamily: "TiltWarp",
               color: "white",
@@ -56,7 +48,7 @@ export default function About() {
             Avid learner, problem solver, and front end developer.
           </Typography>
           <Typography
-            variant='h6'
+            variant='body1'
             sx={{
               fontFamily: "Dosis",
               color: "white",
@@ -70,11 +62,11 @@ export default function About() {
             clients. What I love most about development is the constant
             challenge and growth it provides, while providing an opportunity to
             learn each day. I am currently volunteering my time to several
-            applications for non profit organizations and freelancing while i
+            applications for non profit organizations and freelancing while I
             continue my career journey.
           </Typography>
-        </Box>
-      </Grow>
+        </Grid>
+      </Grid>
     </Container>
   );
 }
