@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography, Box, Container, Avatar } from "@mui/material";
 import Grow from "@mui/material/Grow";
-import screen from "../images/screen.png";
 
 export default function About() {
   const bull = <span className='bullet'>•</span>;
@@ -51,40 +50,37 @@ export default function About() {
               variant='h4'
               sx={{
                 fontFamily: "Dosis",
-                color: "white",
-                opacity: "90%",
+                color: "#4b6d74",
+                opacity: "100%",
                 marginBottom: "2rem",
               }}>
               Tech Stack
             </Typography>
-            <Typography
-              variant='h6'
-              sx={{
-                fontFamily: "TiltWarp",
-                color: "white",
-                opacity: "70%",
-                fontStyle: "italic",
-              }}>
-              {bull} JavaScript
-              {bull} React
-              {bull} React Native
-              {bull} Redux
-              {bull} Node.js
-              {bull} Express
-              {bull} PostgreSQL
-              {bull} HTML
-              {bull} CSS
-              {bull} Git
-              {bull} Linux
-            </Typography>
-            <Avatar
-              alt='JS'
-              src={screen}
-              sx={{
-                width: 150,
-                height: 150,
-              }}
-            />
+            <Container
+              maxWidth='xl'
+              sx={{ display: "flex", flexDirection: "row" }}>
+              <Typography
+                variant='h6'
+                sx={{
+                  fontFamily: "TiltWarp",
+                  color: "white",
+                  opacity: "70%",
+                  textAlign: "center",
+                  marginBottom: "2rem",
+                }}>
+                {bull} JavaScript
+                {bull} React
+                {bull} React Native
+                {bull} Redux
+                {bull} Node.js
+                {bull} Express
+                {bull} PostgreSQL
+                {bull} HTML
+                {bull} CSS
+                {bull} Git
+                {bull} Linux
+              </Typography>
+            </Container>
           </Box>
         </Box>
       </Grow>
