@@ -1,6 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
-import { TextField, Button, Container } from "@mui/material";
+import { TextField, Button, Typography, Container } from "@mui/material";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -44,6 +43,9 @@ export default function Contact() {
           flexDirection: "column",
           color: "#4b6d74",
         }}>
+        <Typography variant='h4' sx={{ marginBottom: "1rem", color: "red" }}>
+          {error ? error : ""}
+        </Typography>
         <TextField
           id='name'
           label='Name'
