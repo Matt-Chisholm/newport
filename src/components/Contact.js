@@ -30,6 +30,9 @@ export default function Contact() {
         <TextField
           id='outlined-basic'
           label='Message'
+          multiline
+          rows={4}
+          autoComplete='none'
           variant='outlined'
           sx={{ width: "50%", marginBottom: "1rem", backgroundColor: "grey" }}
         />
