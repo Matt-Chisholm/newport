@@ -36,10 +36,21 @@ export default function Projects() {
                 color: "grey",
                 opacity: "90%",
               }}>
-              Projects
+              A Few Recent Projects
             </Typography>
           </CardContent>
         </Card>
+        <Typography
+          variant='h7'
+          gutterBottom
+          sx={{
+            fontFamily: "TiltWarp",
+            color: "grey",
+            opacity: "90%",
+            marginTop: "-1rem",
+          }}>
+          Click for github repos
+        </Typography>
         <Container
           sx={{
             backgroundColor: "transparent",

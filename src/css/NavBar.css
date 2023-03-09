@@ -2,3 +2,9 @@
     color:aliceblue;
     font-size: large;
 }
+
+.links:hover {
+    cursor: pointer;
+    width: 4em;
+    height: 4em;
+}

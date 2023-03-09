@@ -7,6 +7,7 @@ import {
   CardContent,
   Avatar,
 } from "@mui/material";
+import "../css/NavBar.css";
 
 export default function HomePage() {
   const card = (
@@ -17,6 +18,7 @@ export default function HomePage() {
             backgroundColor: "#0ddada",
             width: "14%",
             padding: "0",
+            marginBottom: "3rem",
           }}>
           <Typography
             variant='h5'
@@ -37,6 +39,29 @@ export default function HomePage() {
             justifyContent: "center",
             alignItems: "center",
           }}>
+          <Avatar
+            sx={{ width: 60, height: 60, margin: "1rem" }}
+            alt='LinkedIn'
+            className='links'
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/matt-chisholm10/",
+                "_blank"
+              )
+            }
+            src={
+              "https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
+            }
+          />
+          <Avatar
+            sx={{ width: 60, height: 60, margin: "1rem", marginRight: "6rem" }}
+            alt='GitHub'
+            className='links'
+            onClick={() =>
+              window.open("https://github.com/Matt-Chisholm", "_blank")
+            }
+            src={"https://img.icons8.com/ios-glyphs/60/null/github.png"}
+          />
           <Avatar
             alt='Matt Chisholm'
             src={"https://avatars.githubusercontent.com/u/88512443?v=4"}
