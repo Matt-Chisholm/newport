@@ -20,29 +20,34 @@ export default function HomePage() {
       <CardContent>
         <Box
           sx={{
-            backgroundColor: "#0ddada",
-            width: "40%",
-            padding: "0.5rem",
-            marginBottom: "3rem",
-            marginLeft: "8rem",
-            [theme.breakpoints.up("md")]: {
-              width: "14%",
-              padding: "0",
-              marginLeft: "30rem",
-              marginBottom: "0",
-            },
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}>
-          <Typography
-            variant={isSmallScreen ? "h6" : "h5"}
-            gutterBottom
+          <Box
             sx={{
-              fontFamily: "Dosis",
-              color: "black",
-              opacity: "90%",
-              fontSize: isSmallScreen ? "1rem" : "1.5rem",
+              backgroundColor: "#0ddada",
+              width: "40%",
+              padding: "0.5rem",
+              marginBottom: "1rem",
+              [theme.breakpoints.up("md")]: {
+                width: "14%",
+                padding: "0",
+                marginBottom: "2rem",
+              },
             }}>
-            Front End Developer
-          </Typography>
+            <Typography
+              variant={isSmallScreen ? "h6" : "h5"}
+              gutterBottom
+              sx={{
+                fontFamily: "Dosis",
+                color: "black",
+                opacity: "90%",
+                fontSize: isSmallScreen ? "1rem" : "1.5rem",
+              }}>
+              Web & Mobile Developer
+            </Typography>
+          </Box>
         </Box>
         <Stack
           direction={isSmallScreen ? "column" : "row"}
@@ -50,35 +55,12 @@ export default function HomePage() {
           spacing={2}
           sx={{
             backgroundColor: "transparent",
-            justifyContent: isSmallScreen ? "center" : "space-between",
+            justifyContent: isSmallScreen ? "center" : "space-around",
             flexWrap: "wrap",
             "& .links": {
               cursor: "pointer",
             },
           }}>
-          <Avatar
-            sx={{ width: 60, height: 60 }}
-            alt='LinkedIn'
-            className='links'
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/matt-chisholm10/",
-                "_blank"
-              )
-            }
-            src={
-              "https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
-            }
-          />
-          <Avatar
-            sx={{ width: 60, height: 60 }}
-            alt='GitHub'
-            className='links'
-            onClick={() =>
-              window.open("https://github.com/Matt-Chisholm", "_blank")
-            }
-            src={"https://img.icons8.com/ios-glyphs/60/null/github.png"}
-          />
           <Avatar
             sx={{
               width: isSmallScreen ? 60 : 150,

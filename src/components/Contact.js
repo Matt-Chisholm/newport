@@ -6,6 +6,7 @@ import {
   Button,
   Grow,
   Box,
+  Avatar,
 } from "@mui/material";
 import emailjs from "@emailjs/browser";
 import "../css/NavBar.css";
@@ -48,6 +49,7 @@ export default function Contact() {
             textAlign: "center",
             fontFamily: "Dosis",
             color: "grey",
+            marginTop: "-3rem",
           }}>
           Send me an email
         </Typography>
@@ -61,6 +63,37 @@ export default function Contact() {
             alignItems: "center",
             mt: 4,
           }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mb: 2,
+              flexDirection: "row",
+            }}>
+            <Avatar
+              sx={{ width: 60, height: 60, opacity: "60%" }}
+              alt='LinkedIn'
+              className='links'
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/matt-chisholm10/",
+                  "_blank"
+                )
+              }
+              src={
+                "https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
+              }
+            />
+            <Avatar
+              sx={{ width: 60, height: 60, opacity: "60%" }}
+              alt='GitHub'
+              className='links'
+              onClick={() =>
+                window.open("https://github.com/Matt-Chisholm", "_blank")
+              }
+              src={"https://img.icons8.com/ios-glyphs/60/null/github.png"}
+            />
+          </Box>
           <Typography variant='subtitle1' sx={{ mb: 2, color: "error.main" }}>
             {error ? error : ""}
           </Typography>

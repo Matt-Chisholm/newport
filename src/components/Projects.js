@@ -12,7 +12,7 @@ import Grow from "@mui/material/Grow";
 
 export default function Projects() {
   return (
-    <Grow in={true} timeout={1500} style={{ transformOrigin: "0 0 0" }}>
+    <Grow in={true} timeout={1200} style={{ transformOrigin: "0 0 0" }}>
       <Container
         sx={{
           backgroundColor: "transparent",
@@ -21,6 +21,7 @@ export default function Projects() {
           alignItems: "center",
           flexDirection: "column",
           padding: "2rem",
+          marginTop: "-3rem",
         }}>
         <Card
           sx={{
