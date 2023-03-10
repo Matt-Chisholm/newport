@@ -73,7 +73,7 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
               onClick={() => setSelectedScreen("skills")}
               sx={{
                 fontFamily: "Dosis",
-                ...(selectedScreen === "projects" && selectedStyle),
+                ...(selectedScreen === "skills" && selectedStyle),
               }}>
               Skills
             </Button>
