@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardContent,
@@ -11,6 +11,14 @@ import {
 import Grow from "@mui/material/Grow";
 
 export default function Skills() {
+  const [selectedSkill, setSelectedSkill] = useState("");
+
+  const selectedStyle = {
+    color: "#0acfcf",
+    borderBottom: "2px solid #0acfcf",
+    borderTop: "2px solid #0acfcf",
+    borderRadius: "0px",
+  };
   return (
     <Grow in={true} timeout={1200} style={{ transformOrigin: "0 0 0" }}>
       <Container
@@ -45,80 +53,79 @@ export default function Skills() {
         <Box
           sx={{
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            alignItems: "flex-start",
+            justifyContent: "flex-start",
           }}>
-          <Box
+          <Button
+            color='inherit'
+            className='nav-button'
+            onClick={() => setSelectedSkill("front")}
             sx={{
-              backgroundColor: "#0ddada",
-              padding: "0.3rem",
-              marginBottom: "1rem",
-              display: "inline-block",
+              marginRight: "8rem",
+              fontFamily: "Dosis",
+              ...(selectedSkill === "front" && selectedStyle),
             }}>
             <Typography
-              variant='h5'
-              gutterBottom
               sx={{
                 fontFamily: "Dosis",
-                color: "black",
+                color: "#0ddada",
                 opacity: "90%",
-                fontSize: "1.5rem",
               }}>
-              Frontend
+              Front-End
             </Typography>
-          </Box>
+          </Button>
         </Box>
         <Box
           sx={{
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            alignItems: "flex-start",
+            justifyContent: "flex-start",
           }}>
-          <Box
+          <Button
+            color='inherit'
+            className='nav-button'
+            onClick={() => setSelectedSkill("back")}
             sx={{
-              backgroundColor: "#0ddada",
-              padding: "0.3rem",
-              marginBottom: "1rem",
-              display: "inline-block",
+              marginRight: "8rem",
+              marginTop: "1rem",
+              fontFamily: "Dosis",
+              ...(selectedSkill === "back" && selectedStyle),
             }}>
             <Typography
-              variant='h5'
-              gutterBottom
               sx={{
                 fontFamily: "Dosis",
-                color: "black",
+                color: "#0ddada",
                 opacity: "90%",
-                fontSize: "1.5rem",
               }}>
-              Backend
+              Back-End
             </Typography>
-          </Box>
+          </Button>
         </Box>
         <Box
           sx={{
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            alignItems: "flex-start",
+            justifyContent: "flex-start",
           }}>
-          <Box
+          <Button
+            color='inherit'
+            className='nav-button'
+            onClick={() => setSelectedSkill("data")}
             sx={{
-              backgroundColor: "#0ddada",
-              padding: "0.3rem",
-              marginBottom: "1rem",
-              display: "inline-block",
+              marginRight: "8rem",
+              marginTop: "1rem",
+              fontFamily: "Dosis",
+              ...(selectedSkill === "data" && selectedStyle),
             }}>
             <Typography
-              variant='h5'
-              gutterBottom
               sx={{
                 fontFamily: "Dosis",
-                color: "black",
+                color: "#0ddada",
                 opacity: "90%",
-                fontSize: "1.5rem",
               }}>
               Database
             </Typography>
-          </Box>
+          </Button>
         </Box>
       </Container>
     </Grow>
