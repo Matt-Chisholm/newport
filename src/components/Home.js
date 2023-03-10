@@ -7,6 +7,7 @@ import {
   Avatar,
   Stack,
   Box,
+  Button,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -47,6 +48,33 @@ export default function HomePage() {
               Web & Mobile Developer
             </Typography>
           </Box>
+          <Button
+            variant='contained'
+            onClick={() => {
+              window.open(
+                "https://resume.creddle.io/resume/7w30gjoqxwq",
+                "_blank"
+              );
+            }}
+            sx={{
+              marginLeft: "10rem",
+              backgroundColor: "#0ddada",
+              "&:hover": {
+                backgroundColor: "white",
+              },
+            }}>
+            <Typography
+              variant='h7'
+              gutterBottom
+              sx={{
+                fontFamily: "Dosis",
+                color: "black",
+                opacity: "90%",
+                fontSize: "0.8rem",
+              }}>
+              Resume
+            </Typography>
+          </Button>
         </Box>
         <Stack
           direction={isSmallScreen ? "column" : "row"}

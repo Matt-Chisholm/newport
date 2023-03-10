@@ -289,6 +289,31 @@ export default function Skills() {
                   opacity: "90%",
                   marginRight: "1rem",
                 }}>
+                Redux
+              </Typography>
+              <Avatar
+                sx={{
+                  width: "3rem",
+                  height: "3rem",
+                  marginRight: "1rem",
+                  marginTop: "1rem",
+                }}
+                src='https://img.icons8.com/color/48/000000/redux.png'
+              />
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}>
+              <Typography
+                sx={{
+                  fontFamily: "Dosis",
+                  color: "#0ddada",
+                  opacity: "90%",
+                  marginRight: "1rem",
+                }}>
                 React Native
               </Typography>
               <Avatar
