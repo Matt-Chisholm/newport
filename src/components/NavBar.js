@@ -70,6 +70,18 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
             <Button
               color='inherit'
               className='nav-button'
+              onClick={() => setSelectedScreen("skills")}
+              sx={{
+                fontFamily: "Dosis",
+                ...(selectedScreen === "projects" && selectedStyle),
+              }}>
+              Skills
+            </Button>
+          )}
+          {isMobile && (
+            <Button
+              color='inherit'
+              className='nav-button'
               onClick={() => setSelectedScreen("contact")}
               sx={{
                 fontFamily: "Dosis",
@@ -101,6 +113,17 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
                   ...(selectedScreen === "projects" && selectedStyle),
                 }}>
                 Projects
+              </Button>
+              <Button
+                color='inherit'
+                className='nav-button'
+                onClick={() => setSelectedScreen("skills")}
+                sx={{
+                  marginRight: "8rem",
+                  fontFamily: "Dosis",
+                  ...(selectedScreen === "skills" && selectedStyle),
+                }}>
+                Skills
               </Button>
               <Button
                 color='inherit'

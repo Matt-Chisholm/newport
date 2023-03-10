@@ -3,6 +3,7 @@ import HomePage from "./components/Home";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -36,6 +37,7 @@ export default function App() {
         <HomePage />
         {selectedScreen === "home" ? <About /> : null}
         {selectedScreen === "projects" ? <Projects /> : null}
+        {selectedScreen === "skills" ? <Skills /> : null}
         {selectedScreen === "contact" ? <Contact /> : null}
       </div>
     </ThemeProvider>
