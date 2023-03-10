@@ -27,12 +27,11 @@ export default function HomePage() {
           <Box
             sx={{
               backgroundColor: "#0ddada",
-              width: "40%",
-              padding: "0.5rem",
+              padding: "0.3rem",
               marginBottom: "1rem",
+              display: "inline-block",
               [theme.breakpoints.up("md")]: {
-                width: "14%",
-                padding: "0",
+                padding: "0.5rem",
                 marginBottom: "2rem",
               },
             }}>
