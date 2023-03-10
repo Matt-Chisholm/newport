@@ -4,6 +4,7 @@ import {
   CardContent,
   Typography,
   Box,
+  Grid,
   Container,
   Button,
   Avatar,
@@ -51,29 +52,18 @@ export default function Skills() {
             </Typography>
           </CardContent>
         </Card>
-        <Box
-          sx={{
-            display: "flex",
-            alignContent: "center",
-            justifyContent: "center",
-            flexDirection: "row",
-          }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
-            }}>
+        <Grid container justifyContent='center' spacing={2}>
+          <Grid item xs={12} md={4}>
             <Button
               color='inherit'
               className='nav-button'
               onClick={() => setSelectedSkill("front")}
               sx={{
-                marginRight: "8rem",
                 marginTop: "1rem",
                 fontFamily: "Dosis",
                 ...(selectedSkill === "front" && selectedStyle),
-              }}>
+              }}
+              fullWidth>
               <Typography
                 sx={{
                   fontFamily: "Dosis",
@@ -83,23 +73,18 @@ export default function Skills() {
                 Front-End
               </Typography>
             </Button>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
-            }}>
+          </Grid>
+          <Grid item xs={12} md={4}>
             <Button
               color='inherit'
               className='nav-button'
               onClick={() => setSelectedSkill("back")}
               sx={{
-                marginRight: "8rem",
                 marginTop: "1rem",
                 fontFamily: "Dosis",
                 ...(selectedSkill === "back" && selectedStyle),
-              }}>
+              }}
+              fullWidth>
               <Typography
                 sx={{
                   fontFamily: "Dosis",
@@ -109,23 +94,18 @@ export default function Skills() {
                 Back-End
               </Typography>
             </Button>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
-            }}>
+          </Grid>
+          <Grid item xs={12} md={4}>
             <Button
               color='inherit'
               className='nav-button'
               onClick={() => setSelectedSkill("data")}
               sx={{
-                marginRight: "8rem",
                 marginTop: "1rem",
                 fontFamily: "Dosis",
                 ...(selectedSkill === "data" && selectedStyle),
-              }}>
+              }}
+              fullWidth>
               <Typography
                 sx={{
                   fontFamily: "Dosis",
@@ -135,8 +115,9 @@ export default function Skills() {
                 Database
               </Typography>
             </Button>
-          </Box>
-        </Box>
+          </Grid>
+        </Grid>
+
         {selectedSkill === "front" && (
           <Box
             sx={{
@@ -429,6 +410,91 @@ export default function Skills() {
                   marginTop: "1rem",
                 }}
                 src='https://img.icons8.com/color/48/000000/python--v1.png'
+              />
+            </Box>
+          </Box>
+        )}
+        {selectedSkill === "data" && (
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "flex-end",
+              marginTop: "2rem",
+              justifyContent: "flex-end",
+            }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}>
+              <Typography
+                sx={{
+                  fontFamily: "Dosis",
+                  color: "#0ddada",
+                  opacity: "90%",
+                  marginRight: "1rem",
+                }}>
+                MongoDB
+              </Typography>
+              <Avatar
+                sx={{
+                  width: "3rem",
+                  height: "3rem",
+                  marginRight: "1rem",
+                  marginTop: "1rem",
+                }}
+                src='https://img.icons8.com/color/48/000000/mongodb.png'
+              />
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}>
+              <Typography
+                sx={{
+                  fontFamily: "Dosis",
+                  color: "#0ddada",
+                  opacity: "90%",
+                  marginRight: "1rem",
+                }}>
+                PostgreSQL
+              </Typography>
+              <Avatar
+                sx={{
+                  width: "3rem",
+                  height: "3rem",
+                  marginRight: "1rem",
+                  marginTop: "1rem",
+                }}
+                src='https://img.icons8.com/color/48/000000/postgreesql.png'
+              />
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}>
+              <Typography
+                sx={{
+                  fontFamily: "Dosis",
+                  color: "#0ddada",
+                  opacity: "90%",
+                  marginRight: "1rem",
+                }}>
+                Firestore
+              </Typography>
+              <Avatar
+                sx={{
+                  width: "3rem",
+                  height: "3rem",
+                  marginRight: "1rem",
+                  marginTop: "1rem",
+                }}
+                src='https://img.icons8.com/color/48/000000/firebase.png'
               />
             </Box>
           </Box>
