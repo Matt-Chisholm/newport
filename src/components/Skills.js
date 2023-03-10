@@ -12,7 +12,7 @@ import {
 import Grow from "@mui/material/Grow";
 
 export default function Skills() {
-  const [selectedSkill, setSelectedSkill] = useState("");
+  const [selectedSkill, setSelectedSkill] = useState("front");
 
   const selectedStyle = {
     color: "#0acfcf",
@@ -52,7 +52,11 @@ export default function Skills() {
             </Typography>
           </CardContent>
         </Card>
-        <Grid container justifyContent='center' spacing={2}>
+        <Grid
+          container
+          justifyContent='center'
+          spacing={2}
+          sx={{ marginBottom: "2rem" }}>
           <Grid item xs={12} md={4}>
             <Button
               color='inherit'
@@ -119,410 +123,416 @@ export default function Skills() {
         </Grid>
 
         {selectedSkill === "front" && (
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-end",
-              marginTop: "2rem",
-              justifyContent: "flex-end",
-            }}>
+          <Grow in={true} timeout={1200} style={{ transformOrigin: "0 0 0" }}>
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                alignItems: "flex-end",
+                marginTop: "2rem",
+                justifyContent: "flex-end",
               }}>
-              <Typography
+              <Box
                 sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                HTML
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  HTML
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/html-5--v1.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/html-5--v1.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                CSS
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  CSS
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/css3.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/css3.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Javascript
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  Javascript
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/javascript--v1.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/javascript--v1.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Typescript
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  Typescript
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/typescript.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/typescript.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                React
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  React
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/officel/480/null/react.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/officel/480/null/react.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Material UI
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  Material UI
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/material-ui.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/material-ui.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Redux
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  Redux
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/redux.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/redux.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                React Native
-              </Typography>
-              <Avatar
-                sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/react-native.png'
-              />
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  React Native
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/react-native.png'
+                />
+              </Box>
             </Box>
-          </Box>
+          </Grow>
         )}
         {selectedSkill === "back" && (
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-end",
-              marginTop: "2rem",
-              justifyContent: "flex-end",
-            }}>
+          <Grow in={true} timeout={1200} style={{ transformOrigin: "0 0 0" }}>
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                alignItems: "flex-end",
+                marginTop: "2rem",
+                justifyContent: "flex-end",
               }}>
-              <Typography
+              <Box
                 sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Node
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  Node
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/nodejs.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/nodejs.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Express
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  Express
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/office/480/null/express-js.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/office/480/null/express-js.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Ruby
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  Ruby
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/ruby-programming-language.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/ruby-programming-language.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
-                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Python <br /> (in development)
-              </Typography>
-              <Avatar
-                sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/python--v1.png'
-              />
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                    textAlign: "center",
+                  }}>
+                  Python <br /> (in development)
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/python--v1.png'
+                />
+              </Box>
             </Box>
-          </Box>
+          </Grow>
         )}
         {selectedSkill === "data" && (
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-end",
-              marginTop: "2rem",
-              justifyContent: "flex-end",
-            }}>
+          <Grow in={true} timeout={1200} style={{ transformOrigin: "0 0 0" }}>
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                alignItems: "flex-end",
+                marginTop: "2rem",
+                justifyContent: "flex-end",
               }}>
-              <Typography
+              <Box
                 sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                MongoDB
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  MongoDB
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/mongodb.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/mongodb.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                PostgreSQL
-              </Typography>
-              <Avatar
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  PostgreSQL
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/postgreesql.png'
+                />
+              </Box>
+              <Box
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/postgreesql.png'
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}>
-              <Typography
-                sx={{
-                  fontFamily: "Dosis",
-                  color: "#0ddada",
-                  opacity: "90%",
-                  marginRight: "1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}>
-                Firestore
-              </Typography>
-              <Avatar
-                sx={{
-                  width: "3rem",
-                  height: "3rem",
-                  marginRight: "1rem",
-                  marginTop: "1rem",
-                }}
-                src='https://img.icons8.com/color/48/000000/firebase.png'
-              />
+                <Typography
+                  sx={{
+                    fontFamily: "Dosis",
+                    color: "#0ddada",
+                    opacity: "90%",
+                    marginRight: "1rem",
+                  }}>
+                  Firestore
+                </Typography>
+                <Avatar
+                  sx={{
+                    width: "3rem",
+                    height: "3rem",
+                    marginRight: "1rem",
+                    marginTop: "1rem",
+                  }}
+                  src='https://img.icons8.com/color/48/000000/firebase.png'
+                />
+              </Box>
             </Box>
-          </Box>
+          </Grow>
         )}
       </Container>
     </Grow>

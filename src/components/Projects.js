@@ -223,8 +223,7 @@ export default function Projects() {
                     color: "whitesmoke",
                     opacity: "90%",
                   }}>
-                  PAWFIVE is a specialized training app for dogs with multiple
-                  features, including voice recognition. The app is built with
+                  PAWFIVE is a specialized training app for dogs built with
                   React, Express, Bootstrap, Axios and a voice recognition API
                   called Wit.ai.
                 </Typography>

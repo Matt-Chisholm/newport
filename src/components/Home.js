@@ -149,7 +149,8 @@ export default function HomePage() {
           p: 2,
           m: 2,
           color: "#4b6d74",
-          backgroundColor: "#232424",
+          backgroundColor: "#282a2a",
+          borderRadius: "30px",
         }}
         elevation={3}
         className='top-card'>
