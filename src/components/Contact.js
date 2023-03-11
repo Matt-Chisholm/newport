@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import emailjs from "@emailjs/browser";
 import "../css/NavBar.css";
+import ok from "../fonts/ok.png";
 
 export default function Contact() {
   const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -137,9 +138,38 @@ export default function Contact() {
           </Box>
         )}
         {formStatus === "Sent!" && (
-          <Typography variant='subtitle1' sx={{ mb: 2, color: "error.main" }}>
-            {formStatus}
-          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+              mt: 4,
+            }}>
+            <Typography variant='subtitle1' sx={{ color: "success.main" }}>
+              {formStatus}
+            </Typography>
+            <Box sx={{ ml: 1, justifyContent: "center", alignItems: "center" }}>
+              <Typography variant='subtitle1' sx={{ color: "whitesmoke" }}>
+                <br />
+                Thanks for reaching out! I'll get back to you as soon as I can.
+                <br />
+                <Avatar
+                  sx={{
+                    width: 60,
+                    height: 60,
+                    opacity: "100%",
+                    alignSelf: "center",
+                    marginLeft: "43%",
+                    marginTop: "5rem",
+                  }}
+                  alt='Success'
+                  src={ok}
+                />
+              </Typography>
+            </Box>
+          </Box>
         )}
       </Container>
     </Grow>
