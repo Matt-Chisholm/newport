@@ -53,87 +53,94 @@ export default function Contact() {
           }}>
           Send me an email
         </Typography>
-        <Box
-          component='form'
-          onSubmit={handleSubmit}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            mt: 4,
-          }}>
+        {formStatus === "Send" && (
           <Box
+            component='form'
+            onSubmit={handleSubmit}
             sx={{
               display: "flex",
+              flexDirection: "column",
               justifyContent: "center",
-              mb: 2,
-              flexDirection: "row",
+              alignItems: "center",
+              mt: 4,
             }}>
-            <Avatar
-              sx={{ width: 60, height: 60, opacity: "60%" }}
-              alt='LinkedIn'
-              className='links'
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/matt-chisholm10/",
-                  "_blank"
-                )
-              }
-              src={
-                "https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
-              }
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                mb: 2,
+                flexDirection: "row",
+              }}>
+              <Avatar
+                sx={{ width: 60, height: 60, opacity: "60%" }}
+                alt='LinkedIn'
+                className='links'
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/matt-chisholm10/",
+                    "_blank"
+                  )
+                }
+                src={
+                  "https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
+                }
+              />
+              <Avatar
+                sx={{ width: 60, height: 60, opacity: "60%" }}
+                alt='GitHub'
+                className='links'
+                onClick={() =>
+                  window.open("https://github.com/Matt-Chisholm", "_blank")
+                }
+                src={"https://img.icons8.com/ios-glyphs/60/null/github.png"}
+              />
+            </Box>
+            <Typography variant='subtitle1' sx={{ mb: 2, color: "error.main" }}>
+              {error ? error : ""}
+            </Typography>
+            <TextField
+              id='name'
+              className='input'
+              label='Name'
+              variant='outlined'
+              sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
+              fullWidth
             />
-            <Avatar
-              sx={{ width: 60, height: 60, opacity: "60%" }}
-              alt='GitHub'
-              className='links'
-              onClick={() =>
-                window.open("https://github.com/Matt-Chisholm", "_blank")
-              }
-              src={"https://img.icons8.com/ios-glyphs/60/null/github.png"}
+            <TextField
+              id='email'
+              label='Email'
+              className='input'
+              variant='outlined'
+              sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
+              fullWidth
             />
+            <TextField
+              id='message'
+              label='Message'
+              className='input'
+              variant='outlined'
+              multiline
+              rows={4}
+              sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
+              fullWidth
+            />
+            <Button
+              variant='contained'
+              type='submit'
+              sx={{
+                alignSelf: "center",
+                backgroundColor: "#0ddada",
+                color: "black",
+              }}>
+              {formStatus}
+            </Button>
           </Box>
+        )}
+        {formStatus === "Sent!" && (
           <Typography variant='subtitle1' sx={{ mb: 2, color: "error.main" }}>
-            {error ? error : ""}
-          </Typography>
-          <TextField
-            id='name'
-            className='input'
-            label='Name'
-            variant='outlined'
-            sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
-            fullWidth
-          />
-          <TextField
-            id='email'
-            label='Email'
-            className='input'
-            variant='outlined'
-            sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
-            fullWidth
-          />
-          <TextField
-            id='message'
-            label='Message'
-            className='input'
-            variant='outlined'
-            multiline
-            rows={4}
-            sx={{ mb: 2, backgroundColor: "grey", width: "60%" }}
-            fullWidth
-          />
-          <Button
-            variant='contained'
-            type='submit'
-            sx={{
-              alignSelf: "center",
-              backgroundColor: "#0ddada",
-              color: "black",
-            }}>
             {formStatus}
-          </Button>
-        </Box>
+          </Typography>
+        )}
       </Container>
     </Grow>
   );
