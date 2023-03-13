@@ -19,6 +19,7 @@ export default function Contact() {
 
   const [formStatus, setFormStatus] = useState("Send");
   const [error, setError] = useState(null);
+  console.log(errors);
 
   const handleSubmit = (e) => {
     e.preventDefault();
