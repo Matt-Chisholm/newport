@@ -151,7 +151,7 @@ export default function Contact() {
               {formStatus}
             </Typography>
             <Box sx={{ ml: 1, justifyContent: "center", alignItems: "center" }}>
-              <Typography variant='subtitle1' sx={{ color: "whitesmoke" }}>
+              <Typography variant='subtitle2' sx={{ color: "whitesmoke" }}>
                 <br />
                 Thanks for reaching out! I'll get back to you as soon as I can.
                 <br />
