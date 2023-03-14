@@ -4,8 +4,9 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { useMediaQuery } from "@mui/material";
+import { useMediaQuery, Menu, MenuItem } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "../css/NavBar.css";
 
 export default function NavBar({ selectedScreen, setSelectedScreen }) {
@@ -18,6 +19,17 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = (screen) => {
+    setSelectedScreen(screen);
+    setAnchorEl(null);
+  };
 
   return (
     <Box sx={{ flexGrow: 2 }}>
@@ -43,52 +55,31 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
             Matt Chisholm
           </Typography>
           {isMobile && (
-            <Button
-              color='inherit'
-              className='nav-button'
-              onClick={() => setSelectedScreen("home")}
-              sx={{
-                fontFamily: "Dosis",
-                ...(selectedScreen === "home" && selectedStyle),
-              }}>
-              Home
-            </Button>
-          )}
-          {isMobile && (
-            <Button
-              color='inherit'
-              className='nav-button'
-              onClick={() => setSelectedScreen("projects")}
-              sx={{
-                fontFamily: "Dosis",
-                ...(selectedScreen === "projects" && selectedStyle),
-              }}>
-              Projects
-            </Button>
-          )}
-          {isMobile && (
-            <Button
-              color='inherit'
-              className='nav-button'
-              onClick={() => setSelectedScreen("skills")}
-              sx={{
-                fontFamily: "Dosis",
-                ...(selectedScreen === "skills" && selectedStyle),
-              }}>
-              Skills
-            </Button>
-          )}
-          {isMobile && (
-            <Button
-              color='inherit'
-              className='nav-button'
-              onClick={() => setSelectedScreen("contact")}
-              sx={{
-                fontFamily: "Dosis",
-                ...(selectedScreen === "contact" && selectedStyle),
-              }}>
-              Contact
-            </Button>
+            <div>
+              <Button
+                aria-controls='simple-menu'
+                aria-haspopup='true'
+                onClick={handleClick}>
+                <GiHamburgerMenu size='2rem' color='#0acfcf' />
+              </Button>
+              <Menu
+                id='simple-menu'
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}>
+                <MenuItem onClick={() => handleClose("home")}>Home</MenuItem>
+                <MenuItem onClick={() => handleClose("projects")}>
+                  Projects
+                </MenuItem>
+                <MenuItem onClick={() => handleClose("skills")}>
+                  Skills
+                </MenuItem>
+                <MenuItem onClick={() => handleClose("contact")}>
+                  Contact
+                </MenuItem>
+              </Menu>
+            </div>
           )}
           {!isMobile && (
             <>

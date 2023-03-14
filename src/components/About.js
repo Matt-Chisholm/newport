@@ -1,17 +1,9 @@
 import React from "react";
-import {
-  Typography,
-  Box,
-  Container,
-  Avatar,
-  Grid,
-  useMediaQuery,
-} from "@mui/material";
+import { Typography, Box, Container, Grid, useMediaQuery } from "@mui/material";
 import Grow from "@mui/material/Grow";
 import { useTheme } from "@emotion/react";
 
 export default function About() {
-  const bull = <span className='bullet'>•</span>;
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
