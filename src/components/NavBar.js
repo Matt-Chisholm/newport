@@ -65,6 +65,7 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
               <Menu
                 id='simple-menu'
                 anchorEl={anchorEl}
+                color='inherit'
                 keepMounted
                 open={Boolean(anchorEl)}
                 onClose={handleClose}>

@@ -7,6 +7,9 @@ import {
   Avatar,
   Button,
   Grid,
+  Slider,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import Grow from "@mui/material/Grow";
 
