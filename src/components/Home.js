@@ -94,6 +94,7 @@ export default function HomePage() {
               height: isSmallScreen ? 60 : 150,
               marginRight: isSmallScreen ? 0 : "6rem",
               marginBottom: isSmallScreen ? "1rem" : 0,
+              display: isSmallScreen ? "none" : "block",
             }}
             alt='Matt Chisholm'
             src={"https://avatars.githubusercontent.com/u/88512443?v=4"}
