@@ -93,17 +93,6 @@ export default function Projects() {
           Click for github repos
         </Typography>
         <Container>
-          {isMobile ? (
-            <Slider
-              value={index}
-              onChange={handleSliderChange}
-              aria-label='project slider'
-              sx={{ display: { xs: "block", md: "none" }, color: "#0ddada" }}
-              max={projects.length - 1}
-            />
-          ) : (
-            <div></div>
-          )}
           {isMobile &&
             projects.map((project, i) => {
               if (i === index) {
