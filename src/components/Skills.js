@@ -338,32 +338,6 @@ export default function Skills() {
                   src='https://img.icons8.com/color/48/000000/ruby-programming-language.png'
                 />
               </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}>
-                <Typography
-                  sx={{
-                    fontFamily: "Dosis",
-                    color: "#0ddada",
-                    opacity: "90%",
-                    marginRight: "1rem",
-                    textAlign: "center",
-                  }}>
-                  Python <br /> (in development)
-                </Typography>
-                <Avatar
-                  sx={{
-                    width: "3rem",
-                    height: "3rem",
-                    marginRight: "1rem",
-                    marginTop: "1rem",
-                  }}
-                  src='https://img.icons8.com/color/48/000000/python--v1.png'
-                />
-              </Box>
             </Box>
           </Grow>
         )}
