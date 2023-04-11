@@ -63,7 +63,7 @@ export default function Skills() {
               className='nav-button'
               onClick={() => setSelectedSkill("front")}
               sx={{
-                marginTop: "1rem",
+                marginTop: "0rem",
                 fontFamily: "Dosis",
                 ...(selectedSkill === "front" && selectedStyle),
               }}
@@ -84,7 +84,7 @@ export default function Skills() {
               className='nav-button'
               onClick={() => setSelectedSkill("back")}
               sx={{
-                marginTop: "1rem",
+                marginTop: "0rem",
                 fontFamily: "Dosis",
                 ...(selectedSkill === "back" && selectedStyle),
               }}
@@ -105,7 +105,7 @@ export default function Skills() {
               className='nav-button'
               onClick={() => setSelectedSkill("data")}
               sx={{
-                marginTop: "1rem",
+                marginTop: "0rem",
                 fontFamily: "Dosis",
                 ...(selectedSkill === "data" && selectedStyle),
               }}
@@ -123,7 +123,7 @@ export default function Skills() {
         </Grid>
         {selectedSkill === "front" && (
           <Grow in={true} timeout={1200} style={{ transformOrigin: "0 0 0" }}>
-            <Grid container spacing={2} sx={{ marginTop: "2rem" }}>
+            <Grid container spacing={2} sx={{ marginTop: "1rem" }}>
               <Grid item xs={4} sm={2}>
                 <Box
                   sx={{
@@ -260,7 +260,7 @@ export default function Skills() {
               sx={{
                 display: "flex",
                 alignItems: "flex-end",
-                marginTop: "2rem",
+                marginTop: "1rem",
                 justifyContent: "flex-end",
               }}>
               <Box
@@ -373,7 +373,7 @@ export default function Skills() {
               sx={{
                 display: "flex",
                 alignItems: "flex-end",
-                marginTop: "2rem",
+                marginTop: "1rem",
                 justifyContent: "flex-end",
               }}>
               <Box
