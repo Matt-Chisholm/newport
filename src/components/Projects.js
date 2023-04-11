@@ -162,59 +162,61 @@ export default function Projects() {
               return null;
             })}
 
-          <Grid container spacing={3}>
-            {projects.map((project, i) => (
-              <Grid item key={i} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{
-                    backgroundColor: "transparent",
-                    padding: "1rem",
-                    marginBottom: "2rem",
-                  }}>
-                  <CardContent>
-                    <Button
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                      onClick={() => window.open(project.url, "_blank")}>
+          {!isMobile ? (
+            <Grid container spacing={3}>
+              {projects.map((project, i) => (
+                <Grid item key={i} xs={12} sm={6} md={4}>
+                  <Card
+                    sx={{
+                      backgroundColor: "transparent",
+                      padding: "1rem",
+                      marginBottom: "2rem",
+                    }}>
+                    <CardContent>
+                      <Button
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                        onClick={() => window.open(project.url, "_blank")}>
+                        <Typography
+                          variant='h5'
+                          gutterBottom
+                          sx={{
+                            fontFamily: "TiltWarp",
+                            color: "#0ddada",
+                            opacity: "70%",
+                          }}>
+                          {project.name}
+                        </Typography>
+                        <Avatar
+                          alt={project.name}
+                          src={project.image}
+                          sx={{
+                            width: 150,
+                            height: 150,
+                            marginBottom: "1rem",
+                          }}
+                        />
+                      </Button>
                       <Typography
                         variant='h5'
                         gutterBottom
                         sx={{
-                          fontFamily: "TiltWarp",
-                          color: "#0ddada",
+                          fontFamily: "Dosis",
+                          color: "whitesmoke",
                           opacity: "70%",
                         }}>
-                        {project.name}
+                        {project.description}
                       </Typography>
-                      <Avatar
-                        alt={project.name}
-                        src={project.image}
-                        sx={{
-                          width: 150,
-                          height: 150,
-                          marginBottom: "1rem",
-                        }}
-                      />
-                    </Button>
-                    <Typography
-                      variant='h5'
-                      gutterBottom
-                      sx={{
-                        fontFamily: "Dosis",
-                        color: "whitesmoke",
-                        opacity: "70%",
-                      }}>
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          ) : null}
         </Container>
       </Container>
     </Grow>
