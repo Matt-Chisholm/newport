@@ -31,12 +31,12 @@ const projects = [
     url: "https://github.com/Matt-Chisholm/Track-App",
   },
   {
-    name: "Paw-Five",
+    name: "ReelSeek",
     description:
-      "A specialized training app for dogs built with React, Express, Bootstrap, Axios and a voice recognition API called Wit.ai.",
+      "A movie searching site allowing users to search for their favorite movies, and find where to watch them. Using React and the MovieDB API.",
     image:
-      "https://github.com/Matt-Chisholm/Paw-Five/raw/master/docs/readme.md/home.gif?raw=true",
-    url: "https://github.com/Matt-Chisholm/Paw-Five",
+      "https://i2.paste.pics/bb34fb747eddc36d3436b51acc8ffc00.png?trs=d480514643a95f72495df67a610f30e276e3cbd71f10567c404323213de6bb03",
+    url: "https://rainbow-lolly-580c13.netlify.app/",
   },
 ];
 
