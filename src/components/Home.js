@@ -30,6 +30,7 @@ export default function HomePage() {
               backgroundColor: "#0ddada",
               padding: "0.3rem",
               width: "fit-content",
+              borderRadius: "0.5rem",
               marginBottom: "1rem",
               display: "inline-block",
               [theme.breakpoints.up("md")]: {
@@ -59,19 +60,22 @@ export default function HomePage() {
             }}
             sx={{
               marginLeft: "10rem",
+              marginBottom: "1.8rem",
+              width: "8rem",
+              height: "3rem",
               backgroundColor: "#0ddada",
               "&:hover": {
                 backgroundColor: "white",
               },
             }}>
             <Typography
-              variant='h7'
+              variant={isSmallScreen ? "h6" : "h5"}
               gutterBottom
               sx={{
                 fontFamily: "Dosis",
                 color: "black",
                 opacity: "90%",
-                fontSize: "0.8rem",
+                fontSize: isSmallScreen ? "1rem" : "1.5rem",
               }}>
               Resume
             </Typography>
