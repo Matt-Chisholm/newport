@@ -89,7 +89,8 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
                 className='nav-button'
                 onClick={() => setSelectedScreen("home")}
                 sx={{
-                  marginRight: "8rem",
+                  marginRight: "1.6rem",
+                  fontSize: "1.15rem",
                   fontFamily: "Dosis",
                   ...(selectedScreen === "home" && selectedStyle),
                 }}>
@@ -100,7 +101,8 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
                 className='nav-button'
                 onClick={() => setSelectedScreen("projects")}
                 sx={{
-                  marginRight: "8rem",
+                  marginRight: "1.6rem",
+                  fontSize: "1.15rem",
                   fontFamily: "Dosis",
                   ...(selectedScreen === "projects" && selectedStyle),
                 }}>
@@ -111,7 +113,8 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
                 className='nav-button'
                 onClick={() => setSelectedScreen("skills")}
                 sx={{
-                  marginRight: "8rem",
+                  marginRight: "1.6rem",
+                  fontSize: "1.15rem",
                   fontFamily: "Dosis",
                   ...(selectedScreen === "skills" && selectedStyle),
                 }}>
@@ -122,7 +125,8 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
                 className='nav-button'
                 onClick={() => setSelectedScreen("contact")}
                 sx={{
-                  marginRight: "auto",
+                  marginRight: "1.6rem",
+                  fontSize: "1.15rem",
                   fontFamily: "Dosis",
                   ...(selectedScreen === "contact" && selectedStyle),
                 }}>
