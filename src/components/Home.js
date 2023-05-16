@@ -29,6 +29,7 @@ export default function HomePage() {
             sx={{
               backgroundColor: "#0ddada",
               padding: "0.3rem",
+              width: "fit-content",
               marginBottom: "1rem",
               display: "inline-block",
               [theme.breakpoints.up("md")]: {

@@ -35,7 +35,7 @@ const projects = [
     description:
       "A movie searching site allowing users to search for their favorite movies, and find where to watch them. Using React and the MovieDB API.",
     image:
-      "https://camo.githubusercontent.com/21815922c37b144c630fca6e9b04f29bee87f4565fcccea7b0cccb6545918909/68747470733a2f2f69322e70617374652e706963732f62623334666237343765646463333664333433366235316163633866666330302e706e673f7472733d64343830353134363433613935663732343935646636376136313066333065323736653363626437316631303536376334303433323332313364653662623033",
+      "https://i.insider.com/6408ae7afe06040019bf586d?width=1000&format=jpeg&auto=webp",
     url: "https://rainbow-lolly-580c13.netlify.app/",
   },
 ];
