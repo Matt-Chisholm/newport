@@ -149,7 +149,14 @@ export default function HomePage() {
     </React.Fragment>
   );
   return (
-    <Container maxWidth='60%' sx={{ backgroundColor: "#232424" }}>
+    <Container
+      maxWidth='60%'
+      sx={{
+        backgroundColor: "#232424",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}>
       <Card
         sx={{
           p: 2,
@@ -157,6 +164,7 @@ export default function HomePage() {
           color: "#4b6d74",
           backgroundColor: "#282a2a",
           borderRadius: "30px",
+          width: isSmallScreen ? "100%" : "70%",
         }}
         elevation={3}
         className='top-card'>
