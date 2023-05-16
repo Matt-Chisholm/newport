@@ -168,19 +168,29 @@ export default function Projects() {
                 <Grid item key={i} xs={12} sm={6} md={4}>
                   <Card
                     sx={{
-                      backgroundColor: "transparent",
+                      backgroundColor: "#282a2a",
                       padding: "1rem",
                       marginBottom: "2rem",
+                      p: 2,
+                      m: 2,
+                      color: "#4b6d74",
+                      backgroundColor: "#282a2a",
+                      borderRadius: "30px",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "100%",
                     }}>
                     <CardContent>
                       <Button
+                        onClick={() => window.open(project.url, "_blank")}
                         sx={{
                           display: "flex",
                           flexDirection: "column",
                           justifyContent: "center",
                           alignItems: "center",
-                        }}
-                        onClick={() => window.open(project.url, "_blank")}>
+                        }}>
                         <Typography
                           variant='h5'
                           gutterBottom
@@ -208,6 +218,7 @@ export default function Projects() {
                           fontFamily: "Dosis",
                           color: "whitesmoke",
                           opacity: "70%",
+                          textAlign: "center",
                         }}>
                         {project.description}
                       </Typography>
