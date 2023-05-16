@@ -47,9 +47,11 @@ export default function NavBar({ selectedScreen, setSelectedScreen }) {
           <Typography
             variant='h4'
             component='div'
+            className='nav-button'
             sx={{
               flexGrow: 0,
               fontFamily: "Dosis",
+              userSelect: "none",
               marginRight: isMobile ? "auto" : "12rem",
             }}>
             Matt Chisholm
