@@ -158,53 +158,11 @@ export default function Skills() {
                       color: "#0ddada",
                       opacity: "90%",
                     }}>
-                    CSS
-                  </Typography>
-                  <Avatar
-                    sx={{ width: "3rem", height: "3rem", marginTop: "1rem" }}
-                    src='https://img.icons8.com/color/48/000000/css3.png'
-                  />
-                </Box>
-              </Grid>
-              <Grid item xs={4} sm={2}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Dosis",
-                      color: "#0ddada",
-                      opacity: "90%",
-                    }}>
                     Javascript
                   </Typography>
                   <Avatar
                     sx={{ width: "3rem", height: "3rem", marginTop: "1rem" }}
                     src='https://img.icons8.com/color/48/000000/javascript--v1.png'
-                  />
-                </Box>
-              </Grid>
-              <Grid item xs={4} sm={2}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Dosis",
-                      color: "#0ddada",
-                      opacity: "90%",
-                    }}>
-                    Typescript
-                  </Typography>
-                  <Avatar
-                    sx={{ width: "3rem", height: "3rem", marginTop: "1rem" }}
-                    src='https://img.icons8.com/color/48/000000/typescript.png'
                   />
                 </Box>
               </Grid>
@@ -229,6 +187,49 @@ export default function Skills() {
                   />
                 </Box>
               </Grid>
+              <Grid item xs={4} sm={2}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}>
+                  <Typography
+                    sx={{
+                      fontFamily: "Dosis",
+                      color: "#0ddada",
+                      opacity: "90%",
+                    }}>
+                    React Native
+                  </Typography>
+                  <Avatar
+                    sx={{ width: "3rem", height: "3rem", marginTop: "1rem" }}
+                    src='https://img.icons8.com/color/48/000000/react-native.png'
+                  />
+                </Box>
+              </Grid>
+              <Grid item xs={4} sm={2}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}>
+                  <Typography
+                    sx={{
+                      fontFamily: "Dosis",
+                      color: "#0ddada",
+                      opacity: "90%",
+                    }}>
+                    Tailwind
+                  </Typography>
+                  <Avatar
+                    sx={{ width: "3rem", height: "3rem", marginTop: "1rem" }}
+                    src='https://img.icons8.com/?size=512&id=CIAZz2CYc6Kc&format=png'
+                  />
+                </Box>
+              </Grid>
+
               <Grid item xs={4} sm={2}>
                 <Box
                   sx={{
