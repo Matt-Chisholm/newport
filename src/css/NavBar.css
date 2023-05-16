@@ -5,8 +5,6 @@
 
 .links:hover {
     cursor: pointer;
-    width: 3.3em;
-    height: 3.3em;
     box-shadow: inset;
     opacity: 100%;
 }
