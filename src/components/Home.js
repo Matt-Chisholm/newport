@@ -12,6 +12,7 @@ import {
   useTheme,
 } from "@mui/material";
 import "../css/NavBar.css";
+import gif from "../images/flame-space-adventures.gif";
 
 export default function HomePage() {
   const theme = useTheme();
@@ -102,7 +103,7 @@ export default function HomePage() {
               display: isSmallScreen ? "none" : "block",
             }}
             alt='Matt Chisholm'
-            src={"https://avatars.githubusercontent.com/u/88512443?v=4"}
+            src={gif}
           />
           <Avatar
             sx={{
