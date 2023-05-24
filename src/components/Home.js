@@ -85,7 +85,7 @@ export default function HomePage() {
         <Stack
           direction={isSmallScreen ? "column" : "row"}
           alignItems='center'
-          spacing={2}
+          spacing={1}
           sx={{
             backgroundColor: "transparent",
             justifyContent: isSmallScreen ? "center" : "space-around",
@@ -98,7 +98,7 @@ export default function HomePage() {
             sx={{
               width: isSmallScreen ? 60 : 150,
               height: isSmallScreen ? 60 : 150,
-              marginRight: isSmallScreen ? 0 : "6rem",
+              marginRight: isSmallScreen ? 0 : "0rem",
               marginBottom: isSmallScreen ? "1rem" : 0,
               display: isSmallScreen ? "none" : "block",
             }}
