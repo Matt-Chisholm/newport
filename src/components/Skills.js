@@ -275,7 +275,7 @@ export default function Skills() {
                     fontFamily: "Dosis",
                     color: "#0ddada",
                     opacity: "90%",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                   }}>
                   Node
                 </Typography>
@@ -283,7 +283,7 @@ export default function Skills() {
                   sx={{
                     width: "3rem",
                     height: "3rem",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                     marginTop: "1rem",
                   }}
                   src='https://img.icons8.com/color/48/000000/nodejs.png'
@@ -300,7 +300,7 @@ export default function Skills() {
                     fontFamily: "Dosis",
                     color: "#0ddada",
                     opacity: "90%",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                   }}>
                   Express
                 </Typography>
@@ -308,7 +308,7 @@ export default function Skills() {
                   sx={{
                     width: "3rem",
                     height: "3rem",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                     marginTop: "1rem",
                   }}
                   src='https://img.icons8.com/office/480/null/express-js.png'
@@ -362,7 +362,7 @@ export default function Skills() {
                     fontFamily: "Dosis",
                     color: "#0ddada",
                     opacity: "90%",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                   }}>
                   MongoDB
                 </Typography>
@@ -370,7 +370,7 @@ export default function Skills() {
                   sx={{
                     width: "3rem",
                     height: "3rem",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                     marginTop: "1rem",
                   }}
                   src='https://img.icons8.com/color/48/000000/mongodb.png'
@@ -387,7 +387,7 @@ export default function Skills() {
                     fontFamily: "Dosis",
                     color: "#0ddada",
                     opacity: "90%",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                   }}>
                   PostgreSQL
                 </Typography>
@@ -395,7 +395,7 @@ export default function Skills() {
                   sx={{
                     width: "3rem",
                     height: "3rem",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                     marginTop: "1rem",
                   }}
                   src='https://img.icons8.com/color/48/000000/postgreesql.png'
@@ -412,7 +412,7 @@ export default function Skills() {
                     fontFamily: "Dosis",
                     color: "#0ddada",
                     opacity: "90%",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                   }}>
                   Firestore
                 </Typography>
@@ -420,7 +420,7 @@ export default function Skills() {
                   sx={{
                     width: "3rem",
                     height: "3rem",
-                    marginRight: "1rem",
+                    marginRight: "3rem",
                     marginTop: "1rem",
                   }}
                   src='https://img.icons8.com/color/48/000000/firebase.png'
