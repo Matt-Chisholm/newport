@@ -74,24 +74,13 @@ export default function Projects() {
               gutterBottom
               sx={{
                 fontFamily: "TiltWarp",
-                color: "grey",
-                opacity: "90%",
+                color: "#0ddada",
+                opacity: "70%",
               }}>
               A Few Recent Projects
             </Typography>
           </CardContent>
         </Card>
-        <Typography
-          variant='h7'
-          gutterBottom
-          sx={{
-            fontFamily: "TiltWarp",
-            color: "grey",
-            opacity: "90%",
-            marginTop: "-1rem",
-          }}>
-          Click for github repos
-        </Typography>
         <Container>
           {isMobile ? (
             <Slider

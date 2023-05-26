@@ -49,7 +49,8 @@ export default function Contact() {
             fontWeight: "bold",
             textAlign: "center",
             fontFamily: "Dosis",
-            color: "grey",
+            color: "#0ddada",
+            opacity: "90%",
             marginTop: "-3rem",
           }}>
           Send me an email

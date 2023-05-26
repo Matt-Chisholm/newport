@@ -45,8 +45,8 @@ export default function Skills() {
               gutterBottom
               sx={{
                 fontFamily: "TiltWarp",
-                color: "grey",
-                opacity: "90%",
+                color: "#0ddada",
+                opacity: "80%",
               }}>
               Skills
             </Typography>

@@ -24,7 +24,7 @@ export default function About() {
             variant='h4'
             sx={{
               fontFamily: "Dosis",
-              color: "grey",
+              color: "#0ddada",
               opacity: "90%",
               marginBottom: "2rem",
               alignSelf: "center",
