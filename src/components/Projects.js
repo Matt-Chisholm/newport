@@ -171,7 +171,13 @@ export default function Projects() {
                       alignItems: "center",
                       height: "100%",
                     }}>
-                    <CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}>
                       <Button
                         onClick={() => window.open(project.url, "_blank")}
                         sx={{
