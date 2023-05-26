@@ -72,15 +72,16 @@ export default function About() {
                     lineHeight: "1.5rem",
                     marginBottom: "2rem",
                   }}>
-                  I am a Web and Mobile with a bootcamp background and a passion
-                  for UX. Great UI is what drew me to development initially and
-                  I haven't looked back. I am a tenacious self starter who is
-                  detail and results oriented, and love working personably in
-                  teams and with clients. What I love most about development is
-                  the constant challenge and growth it provides, while providing
-                  an opportunity to learn each day. I am currently volunteering
-                  my time to several applications for non profit organizations
-                  and freelancing while I continue my career journey.
+                  I am a Web and Mobile developer who graduated from Lighthouse
+                  Labs Web Dev bootcamp in 2022. Great UI is what drew me to
+                  development initially and I haven't looked back. I am a
+                  tenacious self starter who is detail and results oriented, and
+                  love working personably in teams and with clients. What I love
+                  most about development is the constant challenge and growth it
+                  provides, while providing an opportunity to learn each day. I
+                  am currently volunteering my time to several applications for
+                  non profit organizations and freelancing while I continue
+                  searching for challenging and exciting opportunities.
                 </Typography>
               </Box>
             </Grid>
