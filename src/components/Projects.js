@@ -15,20 +15,20 @@ import Grow from "@mui/material/Grow";
 
 const projects = [
   {
+    name: "GPT-3",
+    description:
+      "A React app built for front-end learning purposes, using bare React and CSS.",
+    image:
+      "https://cosmic-sopapillas-ea591f.netlify.app/static/media/ai.aa60586ba1ba53762d94.png",
+    url: "https://cosmic-sopapillas-ea591f.netlify.app/",
+  },
+  {
     name: "React Tetris",
     description:
       "A working Tetris game built in the browser with React, custom hooks and Styled-Components.",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Typical_Tetris_Game.svg/1200px-Typical_Tetris_Game.svg.png",
     url: "https://github.com/Matt-Chisholm/react-tetris",
-  },
-  {
-    name: "Tracks",
-    description:
-      "A mobile app for users to track their paths when on hikes built with React Native and MongoDB.",
-    image:
-      "https://globalnews.ca/wp-content/uploads/2016/06/160608_barber-greene_nu.jpg?quality=85&strip=all",
-    url: "https://github.com/Matt-Chisholm/Track-App",
   },
   {
     name: "ReelSeek",
