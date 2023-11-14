@@ -61,27 +61,11 @@ export default function About() {
                     opacity: "70%",
                     marginBottom: "2rem",
                   }}>
-                  Avid learner, problem solver, and front end developer.
-                </Typography>
-                <Typography
-                  variant='body1'
-                  sx={{
-                    fontFamily: "Dosis",
-                    color: "white",
-                    opacity: "90%",
-                    lineHeight: "1.5rem",
-                    marginBottom: "2rem",
-                  }}>
-                  I am a Web and Mobile developer who graduated from Lighthouse
-                  Labs Web Dev bootcamp in 2022. Great UI is what drew me to
-                  development initially and I haven't looked back. I am a
-                  tenacious self starter who is detail and results oriented, and
-                  love working personably in teams and with clients. What I love
-                  most about development is the constant challenge and growth it
-                  provides, while providing an opportunity to learn each day. I
-                  am currently volunteering my time to several applications for
-                  non profit organizations and freelancing while I continue
-                  searching for challenging and exciting opportunities.
+                  Web and Mobile Developer <br />
+                  Passionate about solving problems. <br />
+                  Embracing challenges and continuously improving in
+                  development. <br />
+                  Please reach out for any questions or opportunities.
                 </Typography>
               </Box>
             </Grid>
